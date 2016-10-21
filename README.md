@@ -1,4 +1,4 @@
 pythoncodes
 ===========
 
-This includes various implememtation in python 
+This includes various typical implememtations in python 
