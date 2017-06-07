@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# ping test the list of IPs linux & windows hosts
 import subprocess
 import os
 import platform
