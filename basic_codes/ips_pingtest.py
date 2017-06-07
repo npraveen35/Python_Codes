@@ -3,6 +3,7 @@ import subprocess
 import os
 import platform
 '''
+http://www.pythonforbeginners.com/os/subprocess-for-system-administrators
 servers_ips.txt contains ip address in following format
 192.168.1.1
 192.168.1.2
@@ -20,7 +21,9 @@ with open('servers_ips.txt', 'r') as f:
     '''
     for ip in f:
         proc = subprocess.Popen( ['ping', '-c', '3', ip],stdout=subprocess.PIPE)
-        stdout, stderr = proc.communicate()
+        stdout, stderr = proc.communicate() 
+        # Popen.communicate() interacts with process and return a tuple (stdoutdata, stderrdata)
+        # It will Send data to stdin, Read data from stdout and stderr, until end-of-file is reached. Wait for process to terminate
         if proc.returncode == 0:
             print 'Active %s' %ip
         else:
