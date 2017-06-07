@@ -9,6 +9,7 @@ servers_ips.txt contains ip address in following format
 '''
 with open('servers_ips.txt', 'r') as f:
     '''
+    # Below code outputs the ping packets on screen.
     for ip in f:
         ping_str = "-n 1" if  platform.system().lower()=="windows" else "-c 1"
         result = os.system("ping  " + ping_str + " " + ip)
