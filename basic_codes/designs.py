@@ -89,3 +89,73 @@ Enter number of rows:10
   *********
  **********
 '''
+
+# V2 SIMPLE AND COMPACT CODE FOR PATTERNS
+#!/usr/bin/python
+
+def pascalTriangle(n):
+    # LEFT INDENTED TRIANGLES
+    # ActualTriangle
+    print('\n{0:*^16}\n'.format('Pattern1'))
+    for i in range(1,n+1):
+        print '*' * i
+
+    print('\n{0:*^16}\n'.format('Pattern2'))
+    # InvertedTriangle
+    for i in range(n,0,-1):
+        print '*' * i
+
+    # RIGHT INDENTED TRIANGLES
+    # ActualTriangle
+    print('\n{0:*^16}\n'.format('Pattern3'))
+    for i in range(1, n+1):
+        x = ' ' * (n-i)
+        y = '*' * i
+        print x + y
+
+    # InvertedTriangle
+    print('\n{0:*^16}\n'.format('Pattern4'))
+    for i in range(n, 0, -1):
+        x = ' ' * (n-i)
+        y = '*' * i
+        print x + y
+
+pascalTriangle(6)
+
+[praveen@myworld python_works]$ python pascalTriangle.py
+
+****Pattern1****
+
+*
+**
+***
+****
+*****
+******
+
+****Pattern2****
+
+******
+*****
+****
+***
+**
+*
+
+****Pattern3****
+
+     *
+    **
+   ***
+  ****
+ *****
+******
+
+****Pattern4****
+
+******
+ *****
+  ****
+   ***
+    **
+     *
