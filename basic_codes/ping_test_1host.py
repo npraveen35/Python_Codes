@@ -2,7 +2,7 @@
 # TYPE1: for linux hosts, works for Windows too.
 import os
 host = "172.27.16.29" 
-response = os.system("ping -c 3 " + host)
+response = os.system("ping -c 3 " + host) #NOTE: Space after the count value 3 and then concating of IP
 
 # response will be zero for active(up) connection
 if response == 0:
