@@ -1,18 +1,17 @@
 #!/usr/bin/python
 #V1
-str = raw_input('Enter your string:')
 
-def palindrome_check(my_str):
-    rev_str = my_str[::-1]
-    if my_str == rev_str:
-        print my_str, "is PALINDROME"
-    else:
-        print my_str, 'is NOT A PALINDROME'
+def reverse(text):
+    return text[::-1]
 
-palindrome_check(str)
+def is_palindrome(text):
+    return text == reverse(text)
+
+my_str = raw_input('Enter text:')
+
+if is_palindrome(my_str.lower()):
+    print my_str, "is PALINDROME"
+else:
+    print my_str, 'is NOT A PALINDROME'
 
 #V2
-'''
-def palindrome(str):
-    return str == str[::-1]
-'''
